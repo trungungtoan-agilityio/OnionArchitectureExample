@@ -6,6 +6,12 @@
 - **The presentation layer** is where you would Ideally want to put the Project that the User can Access. This can be a WebApi, Mvc Project, etc.
 - **The infrastructure layer** is where you would want to add your Infrastructure. Infrastructure can be anything. Maybe an Entity Framework Core Layer for Accessing the DB, a Layer specifically made to generate JWT Tokens for Authentication or even a Hangfire Layer.
 
+## Advantages of Onion Architecture
+- **Highly Testable** – Since the Core has no dependencies on anything else, writing automated tests are flexible,
+- **Database Independent** – Since we have a clean separation of data access, it is quite easy to switch between different database providers.
+- **Switchable UI Layer (Presentation)** – Since we are keeping all the crucial logic away from the presentation layer, it is quite easy to switch to another tech – including Blazor.
+- **Much Cleaner Codebase** with well-structured Projects for better understanding with teams.
+
 ## List of features and tech
 - Onion Architecture
 - Entity Framework Core
@@ -16,3 +22,16 @@
 - CRUD Operations
 - Inverted Dependencies
 - API Versioning
+- TODOs
+  - Pagination & Response Wrappers
+  - JWT Authentication in API – With Refresh Tokens.
+  - Error Logging with Serilog
+  - Background Job Processing with Hangfire
+
+
+## Add migrations and to generate/update the database
+```
+cd Persistence
+dotnet ef --startup-project ../WebApi migrations add Initial
+dotnet ef --startup-project ../WebApi database update
+```

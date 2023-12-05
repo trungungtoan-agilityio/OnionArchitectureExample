@@ -1,0 +1,16 @@
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/bin/Debug/net8.0/Application.deps.json
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/bin/Debug/net8.0/Application.dll
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/bin/Debug/net8.0/Application.pdb
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/bin/Debug/net8.0/Domain.dll
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/bin/Debug/net8.0/Domain.pdb
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.sourcelink.json
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.csproj.CopyComplete
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.dll
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/refint/Application.dll
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/Application.pdb
+/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/Debug/net8.0/ref/Application.dll

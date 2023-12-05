@@ -8,9 +8,22 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="7.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-rc.2.23480.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Persistence\Persistence.csproj" />
     </ItemGroup>
 
 </Project>

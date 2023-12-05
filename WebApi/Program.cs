@@ -1,9 +1,10 @@
+using Asp.Versioning;
 using Microsoft.OpenApi.Models;
+using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 #region Swagger
@@ -32,31 +33,23 @@ if (app.Environment.IsDevelopment())
 }
 #endregion
 
+#region API Versioning
+// Add API Versioning to the Project
+builder.Services.AddApiVersioning(config =>
+{
+    // Specify the default API Version as 1.0
+    config.DefaultApiVersion = new ApiVersion(1, 0);
+    // If the client hasn't specified the API version in the request, use the default API version number 
+    config.AssumeDefaultVersionWhenUnspecified = true;
+    // Advertise the API versions supported for the particular endpoint
+    config.ReportApiVersions = true;
+});
+#endregion
+
+builder.Services.AddPersistence(builder.Configuration.GetConnectionString("DefaultConnection")
+                                ?? throw new InvalidOperationException("Connection string not found."));
+
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

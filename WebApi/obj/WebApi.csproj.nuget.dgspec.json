@@ -4,14 +4,81 @@
     "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj": {}
   },
   "projects": {
-    "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj": {
+    "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj",
-        "projectName": "WebApi",
-        "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj",
+        "projectUniqueName": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/Application.csproj",
         "packagesPath": "/Users/trungu/.nuget/packages/",
-        "outputPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/obj/",
+        "outputPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/trungu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/Domain.csproj": {
+                "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/Domain.csproj",
+        "packagesPath": "/Users/trungu/.nuget/packages/",
+        "outputPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/trungu/.nuget/NuGet/NuGet.Config"
@@ -37,10 +104,150 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/Persistence.csproj",
+        "packagesPath": "/Users/trungu/.nuget/packages/",
+        "outputPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/trungu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/Application.csproj": {
+                "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Application/Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/WebApi.csproj",
+        "packagesPath": "/Users/trungu/.nuget/packages/",
+        "outputPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/WebApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/trungu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/Persistence.csproj": {
+                "projectPath": "/Users/trungu/Projects/Asoft/Dotnet-Practices/OnionArchitectureExample/Persistence/Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Asp.Versioning.Mvc": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0-rc.2.23480.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

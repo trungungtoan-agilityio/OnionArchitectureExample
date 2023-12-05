@@ -16,21 +16,6 @@ builder.Services.AddSwaggerGen(c =>
         Title = "OnionArchitecture",
     });
 });
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    // Enable middleware to serve generated Swagger as a JSON endpoint.
-    app.UseSwagger();
-    // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-    // specifying the Swagger JSON endpoint.
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnionArchitecture");
-    });
-}
 #endregion
 
 #region API Versioning
@@ -49,7 +34,28 @@ builder.Services.AddApiVersioning(config =>
 builder.Services.AddPersistence(builder.Configuration.GetConnectionString("DefaultConnection")
                                 ?? throw new InvalidOperationException("Connection string not found."));
 
-app.UseHttpsRedirection();
+builder.Services.AddControllers();
 
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+
+    // Enable middleware to serve generated Swagger as a JSON endpoint.
+    app.UseSwagger();
+    // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+    // specifying the Swagger JSON endpoint.
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnionArchitecture");
+    });
+}
+
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();

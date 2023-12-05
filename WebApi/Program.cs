@@ -31,8 +31,7 @@ builder.Services.AddApiVersioning(config =>
 });
 #endregion
 
-builder.Services.AddPersistence(builder.Configuration.GetConnectionString("DefaultConnection")
-                                ?? throw new InvalidOperationException("Connection string not found."));
+builder.Services.AddPersistence(builder.Configuration);
 
 builder.Services.AddControllers();
 

@@ -28,10 +28,15 @@
   - Error Logging with Serilog
   - Background Job Processing with Hangfire
 
+### Migration commands
+> - Init migration: `dotnet ef --startup-project ../WebApi migrations add InitialCreate`
+> - Applying Created Migration: `dotnet ef --startup-project ../WebApi database update`
+> - Remove migration: `dotnet ef --startup-project ../WebApi migrations remove`
+> - Drop database: `dotnet ef --startup-project ../WebApi database drop`
 
-## Add migrations and to generate/update the database
-```
-cd Persistence
-dotnet ef --startup-project ../WebApi migrations add Initial
-dotnet ef --startup-project ../WebApi database update
-```
+### API endpoints
+- GET http://localhost:5262/api/v1.0/Product
+- POST http://localhost:5262/api/v1.0/Produc
+- PUT http://localhost:5262/api/v1.0/Product/{{id}}
+- GET http://localhost:5262/api/v1.0/Product/{{id}}
+- DELETE http://localhost:5262/api/v1.0/Product/{{id}}
